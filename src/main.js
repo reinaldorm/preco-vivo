@@ -68,7 +68,7 @@ async function getFilteredMotherboard() {
       rawPriceText: product.installmentPrice | product.cashPrice,
       tag: product.alternativeTag,
       linkText: product.merchantRedirectUrl,
-      titleText: product.manufacturer + product.name.slice(0, Math.min(product.name.length, 25)),
+      titleText: product.manufacturer + ' ' + product.name,
     });
 
     motherboard.appendChild(productElement);
@@ -89,7 +89,7 @@ async function getFilteredGPU() {
       rawPriceText: product.installmentPrice | product.cashPrice,
       tag: product.alternativeTag,
       linkText: product.merchantRedirectUrl,
-      titleText: product.name.slice(0, Math.min(product.name.length, 25)),
+      titleText: product.manufacturer + ' ' + product.name,
     });
 
     gpu.appendChild(productElement);
@@ -110,7 +110,7 @@ async function getFilteredCPU() {
       rawPriceText: product.installmentPrice | product.cashPrice,
       tag: product.alternativeTag,
       linkText: product.merchantRedirectUrl,
-      titleText: product.name.slice(0, Math.min(product.name.length, 25)),
+      titleText: product.manufacturer + ' ' + product.name,
     });
 
     cpu.appendChild(productElement);
