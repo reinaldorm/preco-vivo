@@ -64,11 +64,11 @@ async function getFilteredMotherboard() {
 
   for (const product of json) {
     const productElement = createProductElement({
-      finalPriceText: product.cashPrice,
+      finalPriceText: product.finalPrice,
       rawPriceText: product.installmentPrice | product.cashPrice,
       tag: product.alternativeTag,
       linkText: product.merchantRedirectUrl,
-      titleText: product.name.slice(0, Math.min(product.name.length, 25)),
+      titleText: product.manufacturer + product.name.slice(0, Math.min(product.name.length, 25)),
     });
 
     motherboard.appendChild(productElement);
