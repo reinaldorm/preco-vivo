@@ -56,7 +56,7 @@ function createProductElement({ titleText, rawPriceText, finalPriceText, linkTex
 
 async function getFilteredMotherboard() {
   const data = await fetch(
-    'https://api.pcbuildwizard.com/products/motherboards/recommend?merchants=&payment=&formFactors=&sockets=AM5&chipsets=B650%2CB850%2CX870&wifiStandards=&colors=&manufacturers='
+    'https://api.pcbuildwizard.com/products/motherboards?merchants=&payment=&formFactors=&sockets=AM5&chipsets=&wifiStandards=&colors=&manufacturers=&mode=1'
   );
   const json = await data.json();
 
@@ -77,7 +77,7 @@ async function getFilteredMotherboard() {
 
 async function getFilteredGPU() {
   const data = await fetch(
-    'https://api.pcbuildwizard.com/products/video-cards/recommend?merchants=&payment=&gpuManufacturers=&chipsets=115%2C125&colors=&manufacturers='
+    'https://api.pcbuildwizard.com/products/video-cards?merchants=&payment=&gpuManufacturers=&chipsets=&colors=&manufacturers=&mode=1'
   );
   const json = await data.json();
 
@@ -98,7 +98,7 @@ async function getFilteredGPU() {
 
 async function getFilteredCPU() {
   const data = await fetch(
-    'https://api.pcbuildwizard.com/products/video-cards?merchants=&payment=&gpuManufacturers=&chipsets=&colors=&manufacturers=&mode=1'
+    'https://api.pcbuildwizard.com/products/cpus?merchants=&payment=&useProfile=1&fpsTarget=120&sockets=AM5&integratedGpus=&manufacturers=&mode=1'
   );
   const json = await data.json();
 
