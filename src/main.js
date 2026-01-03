@@ -98,7 +98,7 @@ async function getFilteredGPU() {
 
 async function getFilteredCPU() {
   const data = await fetch(
-    'https://api.pcbuildwizard.com/products/cpus/recommend?merchants=&payment=&useProfile=1&fpsTarget=120&sockets=AM4%2CAM5&integratedGpus=&manufacturers='
+    'https://api.pcbuildwizard.com/products/video-cards?merchants=&payment=&gpuManufacturers=&chipsets=&colors=&manufacturers=&mode=1'
   );
   const json = await data.json();
 
